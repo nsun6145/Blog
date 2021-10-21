@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Post from './App';
+
+var blogpost ={
+  title :"Cool dinosaurs",
+  author : "Me",
+  body: "Check out our cool collection!",
+  comments: ["Cool collection", "Stego", "Makes me wonder what's for dinner tonight"]
+}
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Post 
+  title = {blogpost.title}
+  author = {blogpost.author}
+  body = {blogpost.body}
+  comments = {blogpost.comments[0]}
+   />,
+
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
