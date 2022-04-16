@@ -8,7 +8,7 @@ export default function About(){
 
      
       const fetchData = async (zip) => {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=052f26926ae9784c2d677ca7bc5dec98`);
+        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?zip=${zip},us&appid=`);
         const forecast = await response.json();
 
         const city = forecast['name'];
